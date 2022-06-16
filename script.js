@@ -44,5 +44,11 @@ const container = document.querySelector(".container");
 
 window.onload = cityInput.focus();
   search.addEventListener("click", getWeatherInfo);
+  cityInput.addEventListener("keydown", (e)=>{
+    if(e.key=='Enter'){
+         search.click()
+    }
+  })
+
 
 /* container.innerHTML += `${main.temp} <br> ${weather[0].description} <br> <img src="http://openweathermap.org/img/wn/${weather[0].icon}@2x.png" alt="ıcon">  `; */
